@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="page-candidature">
+    <!-- Bouton Burger -->
+    <div id="burger-icon" class="fade-loop" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu latéral -->
+    <nav id="side-nav">
+        <div class="nav-header">E-VOTE FASI</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="vote.html">Voter</a></li>
+            <li><a href="propagande.html">Propagande</a></li>
+            <li><a href="communique.html">Communiqué</a></li>
+            <li><a href="candidature.html">Candidature</a></li>
+        </ul>
+    </nav>
+    <main class="hero-section welcome-section">
+        <!-- Formulaire de candidature -->
+        <div class="form-container fade-loop">
+            <h1>Dépôt de Candidature</h1>
+            <p class="fasi-subtitle">Devenez l'un des futurs leaders de la faculté</p>
+
+            <form id="candidateForm">
+                <div class="input-group">
+                    <input type="text" id="nom" placeholder="Votre Nom Complet" required>
+                </div>
+                
+                <div class="input-group">
+                    <select id="poste" required>
+                        <option value="" disabled selected>Choisir le poste visé</option>
+                        <option value="CP">Chef de Promotion (CP)</option>
+                        <option value="CPA">Chef de Promotion Adjoint (CPA)</option>
+                        <option value="Prefac">Président Facultaire (Prefac)</option>
+                        <option value="Aumonier">Aumônier</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="photo">Télécharger votre affiche (Image)</label>
+                    <input type="file" id="photo" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btn-submit">ENVOYER MA CANDIDATURE</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

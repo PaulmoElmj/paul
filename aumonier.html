@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+</head>
+
+<body>
+    <a href="vote.html" class="btn-retour-global">
+        <span class="fleche">&#10229;</span>
+    </a>
+    <br>
+    <br>
+    <br>
+    <h2>Faculte de sciences informatique(FASI) </h2>
+    <h4>promotion L2LMD</h4>
+    <h3>choisie ton candidat</h3>
+    <div class="grid-container">
+        <div class="card">
+            <img src="IMG_E7787.JPG" alt="Photo 3">
+            <button class="voter-style" onclick="toggleform(1)">Voter</button>
+            <p>Votes: <span count-1></span></p>
+            <div id="form-1" class="modal-overly hidden">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="toggleform(1)">&times;</span>
+                    <h3>Identifiez-vous</h3>
+                     <hr>
+                 <div class="input-group">
+                       <input type="text" placeholder="Votre Nom"><br><br>
+                       <input type="text" placeholder="Votre Postnom"><br><br>
+                       <input type="text" placeholder="Votre Prenom"><br><br>
+                       <input type="text" placeholder="Votre Matricule"><br><br>
+                       <input type="text" placeholder="Votre Promotion"><br><br>
+                       <button class="btn-envoyer" onclick="validerVote(1)">Envoyer</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="card">
+            <img src="IMG_E7787.JPG" alt="Photo 3">
+            <button class="voter-style" onclick="toggleform(2)">Voter</button>
+            <p>Votes: <span count-2></span></p>
+            <div id="form-2" class="modal-overly hidden">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="toggleform(2)">&times;</span>
+                    <h3>Identifiez-vous</h3>
+                     <hr>
+                 <div class="input-group">
+                       <input type="text" placeholder="Votre Nom"><br><br>
+                       <input type="text" placeholder="Votre Postnom"><br><br>
+                       <input type="text" placeholder="Votre Prenom"><br><br>
+                       <input type="text" placeholder="Votre Matricule"><br><br>
+                       <input type="text" placeholder="Votre Promotion"><br><br>
+                       <button class="btn-envoyer" onclick="validerVote(2)">Envoyer</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+    </div>
+    <div class="grid-container">
+        <div class="card">
+            <img src="IMG_E7787.JPG" alt="Photo 3">
+            <button class="voter-style" onclick="toggleform(3)">Voter</button>
+            <p>Votes: <span count-3></span></p>
+            <div id="form-3" class="modal-overly hidden">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="toggleform(3)">&times;</span>
+                    <h3>Identifiez-vous</h3>
+                     <hr>
+                 <div class="input-group">
+                       <input type="text" placeholder="Votre Nom"><br><br>
+                       <input type="text" placeholder="Votre Postnom"><br><br>
+                       <input type="text" placeholder="Votre Prenom"><br><br>
+                       <input type="text" placeholder="Votre Matricule"><br><br>
+                       <input type="text" placeholder="Votre Promotion"><br><br>
+                       <button class="btn-envoyer" onclick="validerVote(3)">Envoyer</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+        <div class="card">
+            <img src="IMG_E7787.JPG" alt="Photo 3">
+            <button class="voter-style" onclick="toggleform(26)">Voter</button>
+            <p>Votes: <span count-26></span></p>
+            <div id="form-26" class="modal-overly hidden">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="toggleform(26)">&times;</span>
+                    <h3>Identifiez-vous</h3>
+                     <hr>
+                 <div class="input-group">
+                       <input type="text" placeholder="Votre Nom"><br><br>
+                       <input type="text" placeholder="Votre Postnom"><br><br>
+                       <input type="text" placeholder="Votre Prenom"><br><br>
+                       <input type="text" placeholder="Votre Matricule"><br><br>
+                       <input type="text" placeholder="Votre Promotion"><br><br>
+                       <button class="btn-envoyer" onclick="validerVote(26)">Envoyer</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+</body>
+
+</html>
