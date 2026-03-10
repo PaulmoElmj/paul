@@ -24,7 +24,7 @@ function validerVote(id) {
 }
 function scrollMenu(direction){
     const menu = 
-    document.getElementById('category-Menu');
+    document.getElementById('category-menu');
     const scrollAmount = 300;
     if (direction === 'left'){
         menu.scrollBy({ left:-scrollAmount,behavior:'smooth'});     

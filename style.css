@@ -37,7 +37,7 @@ body {
     left: -300px;
     width: 280px;
     height: 100%;
-    background:rgba(255, 255, 225, 0.05);
+    background: #000133;
     backdrop-filter: blur(15px);
     border-right: 1px solid rgba(0, 153, 255, 0.3);
     z-index: 10000;
@@ -135,25 +135,34 @@ h4 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 50px;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    gap: 10px;
 }
-.category-wrapper{
-    width: 350px;
-    margin: 0 auto;
-    overflow: hidden;
-    display: block;
-}
+
 .category-menu{
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px;
-    white-space: nowrap;
-    padding: 10px;
-    scrollbar-width: none;
-    justify-content: flex-start;
+   display: flex;
+   gap: 15px;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   padding: 10px  20px;
+   white-space: nowrap;
+   padding: 10px;
+   flex: 1;
+   width: 100%;
+   scrollbar-width: none;
+   justify-content: flex-start;
+   align-items: center;
+   -webkit-overflow-scrolling: touch;
+
+}
+.category-menu .nav-btn{
+    flex-shrink: 0;
+    display: inline-block;
+    min-width: max-content;
+   
+   
 }
 .category-menu::-webkit-scrollbar{
     display: none;
@@ -202,6 +211,7 @@ h4 {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
 }
+
 
 .container {
     width: 80%;
@@ -348,7 +358,7 @@ button {
 
 /* Fond avec un dégradé plus riche */
 .index {
-    background: radial-gradient(circle at center, #001f3f, #000510);
+    background:#000133 ;
     color: white;
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -429,7 +439,7 @@ grid-template-columns: repeat(4,1fr);
 }
 /* Fond de la page */
 body {
-    background: radial-gradient(circle, #001f3f 0%, #000b2e 100%) !important;
+    background: #000133;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -515,4 +525,77 @@ body {
 
 .btn-submit:active { 
     transform: scale(0.98); 
+}
+.criteres-box {
+    background: rgba(0, 153, 255, 0.1);
+    border-left: 4px solid #0099ff;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px; /* Aligné avec la largeur de ton formulaire */
+    border-radius: 0 10px 10px 0;
+    backdrop-filter: blur(5px);
+}
+
+.criteres-box li {
+    margin-bottom: 8px;
+    list-style-position: inside;
+}
+@media (max-width: 768px){
+    .grid-container,.main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .card img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 768px){
+    .modal-content{
+        width: 95%;
+        padding: 20px 15px;
+        margin: 10% auto;
+    }
+    .input-group input{
+        width: 100%;
+        font-size: 16px;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px){
+    #burger-icon{
+        display: flex;
+    }
+    .category-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+@media(max-width: 768px){
+    .category-menu{
+        justify-content:flex-start ;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .arrow-btn{
+        display: none;
+    }
+    .navigation-container{
+        gap: 0;
+    }
 }
