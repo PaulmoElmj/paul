@@ -16,47 +16,55 @@
     <br>
     <br>
     <br>
-    <h2>Faculte de sciences informatique(FASI) </h2>
+    <h2>Chef de promotion adjoin(CPA) </h2>
     <h4>promotion L1 LMD</h4>
     <h3>choisie ton candidat</h3>
     <div class="grid-container">
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+         <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(8)">Voter</button>
-            <p>Votes: <span count-8></span></p>
+            <p>Votes: <span id="count-8">0</span></p>
             <div id="form-8" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(8)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(8)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-8"class="input-group">
+                      <input type="hidden" name="id_candidat" value="8">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-8"  placeholder="Votre Nom" required><br><br>
+                       <input type="text" id="Postnom-8" placeholder="Votre Postnom" required><br><br>
+                       <input type="text" id="Prenom-8" placeholder="Votre Prenom" required><br><br>
+                       <input type="text" id="matricule-8"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L1LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(8)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+         <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(9)">Voter</button>
-            <p>Votes: <span count-9></span></p>
+            <p>Votes: <span id="count-9">0</span></p>
             <div id="form-9" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(9)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(9)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-9"class="input-group">
+                      <input type="hidden" name="id_candidat" value="9">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-9"  placeholder="Votre Nom"required><br><br>
+                       <input type="text" id="Postnom-9" placeholder="Votre Postnom"required><br><br>
+                       <input type="text" id="Prenom-9" placeholder="Votre Prenom"required><br><br>
+                       <input type="text" id="matricule-9"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L1LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(9)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>
@@ -64,43 +72,51 @@
  <h4>promotion L2LMD</h4>
     <h3>choisie ton candidat</h3>
     <div class="grid-container">
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+         <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(20)">Voter</button>
-            <p>Votes: <span count-20></span></p>
+            <p>Votes: <span id="count-20">0</span></p>
             <div id="form-20" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(20)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(20)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-20"class="input-group">
+                      <input type="hidden" name="id_candidat" value="20">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-20"  placeholder="Votre Nom"required><br><br>
+                       <input type="text" id="Postnom-20" placeholder="Votre Postnom"required><br><br>
+                       <input type="text" id="Prenom-20" placeholder="Votre Prenom"required><br><br>
+                       <input type="text" id="matricule-20"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L2LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(20)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+         <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(21)">Voter</button>
-            <p>Votes: <span count-21></span></p>
+            <p>Votes: <span id="count-21">0</span></p>
             <div id="form-21" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(21)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(21)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-4"class="input-group">
+                      <input type="hidden" name="id_candidat" value="21">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-21"  placeholder="Votre Nom"required><br><br>
+                       <input type="text" id="Postnom-21" placeholder="Votre Postnom"required><br><br>
+                       <input type="text" id="Prenom-21" placeholder="Votre Prenom"required><br><br>
+                       <input type="text" id="matricule-21"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L2LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(21)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>
@@ -108,43 +124,51 @@
  <h4>promotion L3LMD</h4>
     <h3>choisie ton candidat</h3>
     <div class="grid-container">
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+         <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(22)">Voter</button>
-            <p>Votes: <span count-222></span></p>
+            <p>Votes: <span id="count-22">0</span></p>
             <div id="form-22" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(22)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(22)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-22"class="input-group">
+                      <input type="hidden" name="id_candidat" value="22">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-22"  placeholder="Votre Nom"required><br><br>
+                       <input type="text" id="Postnom-22" placeholder="Votre Postnom"required><br><br>
+                       <input type="text" id="Prenom-22" placeholder="Votre Prenom"required><br><br>
+                       <input type="text" id="matricule-22"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L3LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(22)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+         <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(23)">Voter</button>
-            <p>Votes: <span count-23></span></p>
+            <p>Votes: <span id="count-23">0</span></p>
             <div id="form-23" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(23)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(23)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-23"class="input-group">
+                      <input type="hidden" name="id_candidat" value="23">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-23"  placeholder="Votre Nom"required><br><br>
+                       <input type="text" id="Postnom-23" placeholder="Votre Postnom"required><br><br>
+                       <input type="text" id="Prenom-23" placeholder="Votre Prenom"required><br><br>
+                       <input type="text" id="matricule-23"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L3LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(23)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>
@@ -152,43 +176,51 @@
  <h4>promotion L4LMD</h4>
     <h3>choisie ton candidat</h3>
     <div class="grid-container">
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+         <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(24)">Voter</button>
-            <p>Votes: <span count-24></span></p>
+            <p>Votes: <span id="count-24">0</span></p>
             <div id="form-24" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(24)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(24)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-24"class="input-group">
+                      <input type="hidden" name="id_candidat" value="24">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-24"  placeholder="Votre Nom"required><br><br>
+                       <input type="text" id="Postnom-24" placeholder="Votre Postnom"required><br><br>
+                       <input type="text" id="Prenom-24" placeholder="Votre Prenom"required><br><br>
+                       <input type="text" id="matricule-24"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L4LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(24)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>
-        <div class="card">
-            <img src="IMG_E7787.JPG" alt="Photo 3">
+       <div class="card">
+            <img src="election.jpeg" alt="Photo 3">
             <button class="voter-style" onclick="toggleform(25)">Voter</button>
-            <p>Votes: <span count-25></span></p>
+            <p>Votes: <span id="count-25">0</span></p>
             <div id="form-25" class="modal-overly hidden">
                 <div class="modal-content">
                     <span class="close-btn" onclick="toggleform(25)">&times;</span>
                     <h3>Identifiez-vous</h3>
+                     <p style="font-size: 0.8rem; color: #0099ff; margin-bottom: 15px;">Une seul vote autorisé par étudiant</p>
                      <hr>
-                 <div class="input-group">
-                       <input type="text" placeholder="Votre Nom"><br><br>
-                       <input type="text" placeholder="Votre Postnom"><br><br>
-                       <input type="text" placeholder="Votre Prenom"><br><br>
-                       <input type="text" placeholder="Votre Matricule"><br><br>
-                       <input type="text" placeholder="Votre Promotion"><br><br>
-                       <button class="btn-envoyer" onclick="validerVote(25)">Envoyer</button>
-                 </div>
+                     <form id="vote-form-25"class="input-group">
+                      <input type="hidden" name="id_candidat" value="25">
+                      <input type="hidden" name="categorie" value="cpa">
+                       <input type="text" id="nom-25"  placeholder="Votre Nom"required><br><br>
+                       <input type="text" id="Postnom-25" placeholder="Votre Postnom"required><br><br>
+                       <input type="text" id="Prenom-25" placeholder="Votre Prenom"required><br><br>
+                       <input type="text" id="matricule-25"  placeholder="Votre Matricule(Ex: 22FASIA)">
+                       <div style="text-align: left; color: #ccc; font-size: 0.8rem; margin-left: 5px;">Votre promotion :</div>
+                       <input type="text" name="promotion" value="L4LMD" readonly style="background: rgba(0, 153, 255, 0.1); cursor:not-allowed; border-color: #004466;"><br><br>
+                       <button type="submit" class="btn-envoyer" onclick="enregistrerVote(25)">CONFIRMER MON VOTE</button>
+                     </form>
              </div>
          </div>
      </div>

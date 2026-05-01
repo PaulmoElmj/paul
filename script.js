@@ -1,27 +1,56 @@
-function toggleform(id) {
-    const form =
-        document.getElementById('form-' + id);
-    document.querySelectorAll(' .form-container').forEach(f => {
-        if (f.id !== 'form-' + id) f.classList.add('hidden');
-    });
-    if (form) {
-        form.classList.toggle('hidden');
-    }
+function toggleform(id){
+   const modal = document.getElementById('form-'+ id) ;
+   if (modal){
+    modal.classList.toggle('hidden');
+    console.log("fenetre"+ id + "ouverte!");
+   }else{
+    console.error("ID form-" + id + "introuble!")
+   }
 }
-function validerVote(id) {
-    alert("Merci ! Votre vote pour le candidat " + id + "est pris en compte.");
+// Fonction pour enregistrer le vote de N'IMPORTE QUEL candidat
+function enregistrerVote(id) {
+    const matriculeInput = document.getElementById('matricule-' + id);
+    if (!matriculeInput) return;
 
-    const countSpan =
-        document.getElementById('count-' + id);
-    if (countSpan) {
-        let actuel = parseInt(countSpan.innerText) || 0;
-        countSpan.innerText = actuel + 1;
+    const matricule = matriculeInput.value;
+
+    if (matricule === "") {
+        alert("Veuillez entrer votre matricule !");
+        return;
     }
-    const form = document.getElementById('form-' + id);
-    if (form) {
-        form.classList.add('hidden');
+
+    // Vérifie si ce matricule a déjà voté TOUT COURT (un seul vote autorisé)
+    if (localStorage.getItem('deja_vote_' + matricule)) {
+        alert("Désolé, ce matricule a déjà servi pour un vote !");
+        return;
     }
+
+    // Récupérer, incrémenter et sauvegarder
+    let votes = parseInt(localStorage.getItem('votes_cand_' + id) || 0);
+    votes++;
+    
+    localStorage.setItem('votes_cand_' + id, votes);
+    localStorage.setItem('deja_vote_' + matricule, 'true');
+
+    // Mise à jour visuelle du bon compteur
+    document.getElementById('count-' + id).innerText = votes;
+
+    alert("Vote enregistré pour le candidat n°" + id);
+    toggleform(id);
 }
+
+// Charger TOUS les scores au démarrage
+window.onload = function() {
+    // Si tu as 10 candidats, on boucle de 1 à 10
+    for (let i = 1; i <= 10; i++) {
+        const score = localStorage.getItem('votes_cand_' + i) || 0;
+        const element = document.getElementById('count-' + i);
+        if (element) {
+            element.innerText = score;
+        }
+    }
+};
+
 function scrollMenu(direction){
     const menu = 
     document.getElementById('category-menu');

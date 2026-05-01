@@ -39,29 +39,38 @@
         <div class="form-container fade-loop">
             <h1>Dépôt de Candidature</h1>
             <p class="fasi-subtitle">Devenez l'un des futurs leaders de la faculté</p>
+            <form action="traitement_candidature.php" method="post" enctype="multipart/form-data">
+    <div class="input-group">
+        <input type="text" id="nom" name="nom" placeholder="Votre Nom Complet" required>
+    </div>
 
-            <form id="candidateForm">
-                <div class="input-group">
-                    <input type="text" id="nom" placeholder="Votre Nom Complet" required>
-                </div>
-                
-                <div class="input-group">
-                    <select id="poste" required>
-                        <option value="" disabled selected>Choisir le poste visé</option>
-                        <option value="CP">Chef de Promotion (CP)</option>
-                        <option value="CPA">Chef de Promotion Adjoint (CPA)</option>
-                        <option value="Prefac">Président Facultaire (Prefac)</option>
-                        <option value="Aumonier">Aumônier</option>
-                    </select>
-                </div>
+    <div class="input-group">
+        <select id="poste" name="poste" required>
+            <option value="" disabled selected>Choisir le poste visé</option>
+            <option value="CP">Chef de Promotion (CP)</option>
+            <option value="CPA">Chef de Promotion Adjoint (CPA)</option>
+            <option value="Prefac">Président Facultaire (Prefac)</option>
+            <option value="Président">Président</option>
+        </select>
+    </div>
 
-                <div class="input-group">
-                    <label for="photo">Télécharger votre affiche (Image)</label>
-                    <input type="file" id="photo" accept="image/*" required>
-                </div>
+    <div class="input-group">
+        <select id="promotion" name="promotion" required>
+            <option value="" disabled selected>Choisir ta promotion</option>
+            <option value="L1LMD">L1LMD</option>
+            <option value="L2LMD">L2LMD</option>
+            <option value="L3LMD">L3LMD</option>
+            <option value="L4LMD">L4LMD</option>
+        </select>
+    </div>
 
-                <button type="submit" class="btn-submit">ENVOYER MA CANDIDATURE</button>
-            </form>
+    <div class="input-group">
+        <label for="photo">Télécharger votre affiche (Image)</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+    </div>
+
+    <button type="submit" class="btn-submit">ENVOYER MA CANDIDATURE</button>
+</form>
         </div>
     </main>
 

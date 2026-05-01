@@ -1,0 +1,126 @@
+<!-- Bouton Burger -->
+    <div id="burger-icon" class="fade-loop" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu latéral -->
+    <nav id="side-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="vote.html">Voter</a></li>
+            <li><a href="propagande.html">Propagande</a></li>
+            <li><a href="communique.html">Communiqué</a></li>
+            <li><a href="candidature.html">Candidature</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section principale -->
+    <main class="hero-section">
+        <div class="fade-loop">
+            <h1 class="main-title">Bienvenue sur E-Vote</h1>
+            <br>
+            <br>
+            <br>
+            <p class="fasi-subtitle">Faculté de sciences Informatique (FASI)</p>
+            <div class="decorative-line"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+.icon { font-size: 3rem; margin-bottom: 15px; }
+
+/* L'effet de respiration que tu as demandé */
+@keyframes breath {
+    0%, 100% { opacity: 0.3; transform: scale(0.98); }
+    50% { opacity: 1; transform: scale(1); }
+}
+animation: breath 5s infinite ease-in-out;
+.fade-loop {
+    animation: breath 5s infinite ease-in-out;
+}
+/* --- L'EFFET DE RESPIRATION (DISPARAÎTRE/RÉAPPARAÎTRE) --- */
+@keyframes breathEffect {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(0.98);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+<div id="burger-icon" class="fade-loop" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <nav id="side-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="vote.html">Voter</a></li>
+            <li><a href="candidature.html">Candidature</a></li>
+            <li><a href="propagande.html">Propagande</a></li>
+            <li><a href="communique.html">Propagande</a></li>
+        </ul>
+    </nav>
+@media (max-width:768px){
+    .grid-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .card{
+        width: 250px;
+    }
+    @media(max-width: 600px) {
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .button {
+        width: 80%;
+    }
+}
+@media (max-width:768px){
+    .grid-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .card{
+        width: 250px;
+    }
+}
+ radial-gradient(circle at center, #001f3f, #000510)
+
+ 
+
+function toggleform(id) {
+    const form =
+        document.getElementById('form-' + id);
+    document.querySelectorAll(' .form-container').forEach(f => {
+        if (f.id !== 'form-' + id) f.classList.add('hidden');
+    });
+    if (form) {
+        form.classList.toggle('hidden');
+    }
+}
+function validerVote(id) {
+    alert("Merci ! Votre vote pour le candidat " + id + "est pris en compte.");
+
+    const countSpan =
+        document.getElementById('count-' + id);
+    if (countSpan) {
+        let actuel = parseInt(countSpan.innerText) || 0;
+        countSpan.innerText = actuel + 1;
+    }
+    const form = document.getElementById('form-' + id);
+    if (form) {
+        form.classList.add('hidden');
+    }
+}
